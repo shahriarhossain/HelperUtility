@@ -3,7 +3,7 @@ using Renci.SshNet;
 using System;
 using System.IO;
 
-namespace GTW.Sync.Service.Helper.SFTP
+namespace UtilityHouse.Service.Helper.SFTP
 {
     public class SFTPUtility
     {
