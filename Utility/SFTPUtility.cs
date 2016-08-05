@@ -12,7 +12,7 @@ namespace UtilityHouse.Service.Helper.SFTP
         private static ConnectionInfo conncectionInfo = null;
 
         private SFTPUtility()
-        {
+        {   //Public SFTP credential : http://www.sftp.net/public-online-sftp-servers
             conncectionInfo = new ConnectionInfo(ApplicationConstants.SFTPHost, ApplicationConstants.SFTPPort, ApplicationConstants.SFTPUsername,
             new AuthenticationMethod[]{
                 new PasswordAuthenticationMethod(ApplicationConstants.SFTPUsername, ApplicationConstants.SFTPPassword)
