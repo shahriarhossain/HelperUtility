@@ -1,13 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Security.Cryptography;
-using CRUD_API_JWT.Models;
 
-namespace CRUD_API_JWT.Helper
+namespace SecretBook.Helper
 {
     public static class Cryptography
     {
-        private static string EncryptionKey = ApplicationConstants.CryptoKey;
+        private static string EncryptionKey;
         private static byte[] Key;
         private static byte[] iv;
         public static string Encrypt(string cipherText)
