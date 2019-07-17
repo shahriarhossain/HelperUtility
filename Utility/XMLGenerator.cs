@@ -39,8 +39,8 @@ namespace PaySpan.Sync.Service.Helper
         
         public static T XmlToObj<T>(string xmlData)
         {
-            try
-            {
+           try
+           {
                 XmlSerializer xmlSerialize = new XmlSerializer(typeof(T));
 
                 var xmlResult = (T)xmlSerialize.Deserialize(new StringReader(xmlData));
@@ -49,7 +49,6 @@ namespace PaySpan.Sync.Service.Helper
                     return xmlResult;
                 else
                     return default(T);
-             
             }
             catch (Exception ex)
             {
