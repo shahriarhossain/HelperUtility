@@ -36,6 +36,26 @@ namespace PaySpan.Sync.Service.Helper
             }
             return sw.ToString();
         }
+        
+        public static T XmlToObj<T>(string xmlData)
+        {
+            try
+            {
+                XmlSerializer xmlSerialize = new XmlSerializer(typeof(T));
 
+                var xmlResult = (T)xmlSerialize.Deserialize(new StringReader(xmlData));
+
+                if (xmlResult != null)
+                    return xmlResult;
+                else
+                    return default(T);
+             
+            }
+            catch (Exception ex)
+            {
+                // Log error here.
+                return default(T);
+            }
+        }
     }
 }
